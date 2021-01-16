@@ -19,10 +19,13 @@ function seculoAC($int){
         $str2=' SEC.'.$int.' ac ('.$roman.' ac) ';
     }elseif($start>=1000){
         $str1=$start.'ac-'.$end.'ac';
-        $str2='   SEC.'.$int.' ac ('.$roman.' ac) ';
+        $str2='  SEC.'.$int.' ac ('.$roman.' ac) ';
     }else{
         $str1=$start.'ac-'.$end.'ac ';
-        $str2='    SEC.'.$int.' ac ('.$roman.' ac) ';
+        $str2='   SEC.'.$int.' ac ('.$roman.' ac) ';
+    }
+    if($start==100){
+        $str1=$start.'ac-'.$end.'ac   ';
     }
     if($start==1000){
         $str1=$start.'ac-'.$end.'ac ';
@@ -30,6 +33,7 @@ function seculoAC($int){
     if($start==10000){
         $str1=$start.'ac-'.$end.'ac ';
     }
+    $str1='#'.$str1;
     $len1=strlen($str1);
     $i=1;
     $max=12-$len1;
@@ -40,7 +44,7 @@ function seculoAC($int){
     print $str1;
     $len2=strlen($str2);
     $i=1;
-    $max=58-$len2;//58=lauda 70
+    $max=57-$len2;//58=lauda 70
     if($start>=10000){
         $max=$max-3;
     }
