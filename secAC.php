@@ -22,7 +22,7 @@ function seculoAC($int){
         $str2='   SEC.'.$int.' ac ('.$roman.' ac) ';
     }else{
         $str1=$start.'ac-'.$end.'ac ';
-        $str2='    SEC.'.$int.' ac ('.$roman.'  ac) ';
+        $str2='    SEC.'.$int.' ac ('.$roman.' ac) ';
     }
     if($start==1000){
         $str1=$start.'ac-'.$end.'ac ';
@@ -54,7 +54,7 @@ function seculoAC($int){
     print $str2.PHP_EOL;
 }
 
-$i=145;
+$i=40;
 while($i>0){
     print seculoAC($i);
     $i--;
