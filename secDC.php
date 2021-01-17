@@ -14,7 +14,7 @@ function seculoDC($int){
         $end=($start-100)+1;
     }
     $roman=$converter->toRoman($int);
-    $str1=$end.'-'.$start;
+    $str1='#'.$end.'-'.$start;
     $len1=strlen($str1);
     $i=1;
     $max=12-$len1;
